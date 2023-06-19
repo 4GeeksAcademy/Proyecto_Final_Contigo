@@ -55,7 +55,7 @@ class Recurso(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     categoria = db.Column(db.String(80), db.ForeignKey('categorias.descripcion'))
     nombre = db.Column(db.String(80), unique=True, nullable=False)
-    modalidad = db.Column(db.String(20), db.ForeignKey('modalidad.descripcion'))
+    virtual = db.Column(db.Boolean(), unique=False, nullable=False)
     dirección = db.Column(db.String(80), unique=False, nullable=True)
     codigo_postal = db.Column(db.Integer(), unique=False, nullable=True)
     telefono = db.Column(db.Integer(), unique=False, nullable=False)
@@ -73,7 +73,7 @@ class Recurso(db.Model):
             "id": self.id,
             "categoria": self.categoria,
             "nombre": self.nombre,
-            "modalidad": self.modalidad,
+            "virtual": self.virtual,
             "direccion": self.direccion,
             "codigo_postal": self.codigo_postal,
             "telefono": self.telefono,
@@ -99,20 +99,6 @@ class Categorias(db.Model):
             # do not serialize the password, its a security breach
         }
 
-
-class Modalidad(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    descripcion = db.Column(db.String(20), unique=True, nullable=False)    
-
-    def __repr__(self):
-        return f'<User {self.email}>'
-
-    def serialize(self):
-        return {
-            "id": self.id,
-            "descripcion": self.descripcion,
-            # do not serialize the password, its a security breach
-        }
 
 
 class Peticion(db.Model):

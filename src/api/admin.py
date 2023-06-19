@@ -1,7 +1,7 @@
   
 import os
 from flask_admin import Admin
-from .models import db, Usuario, ONG, Recurso, Categorias, Modalidad, Peticion
+from .models import db, Usuario, ONG, Recurso, Categorias, Peticion
 from flask_admin.contrib.sqla import ModelView
 
 def setup_admin(app):
@@ -15,7 +15,6 @@ def setup_admin(app):
     admin.add_view(ModelView(ONG, db.session))
     admin.add_view(ModelView(Recurso, db.session))
     admin.add_view(ModelView(Categorias, db.session))
-    admin.add_view(ModelView(Modalidad, db.session))
     admin.add_view(ModelView(Peticion, db.session))
 
 
