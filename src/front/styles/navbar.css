@@ -1,0 +1,26 @@
+.btn {
+  text-decoration: none;
+  color: #8f8f90;
+}
+
+.btn:hover {
+  transition: 0.3s;
+  color: #333333;
+}
+
+.login {
+  position: relative;
+  color: #333333;
+  margin-left: 100px;
+}
+.login.btn:hover {
+  color: #ec5548;
+}
+
+.lenguaje {
+  position: relative;
+  color: #333333;
+}
+.lenguaje.btn:hover {
+  color: #f4b233;
+}
