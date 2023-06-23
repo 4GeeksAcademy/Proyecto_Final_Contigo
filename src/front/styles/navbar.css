@@ -1,9 +1,17 @@
-.btn {
+.home {
+  margin-top: 30px;
+}
+
+.nav-item {
+  padding: 7px;
+}
+
+a {
   text-decoration: none;
   color: #8f8f90;
 }
 
-.btn:hover {
+a:hover {
   transition: 0.3s;
   color: #333333;
 }
@@ -15,6 +23,7 @@
 }
 .login.btn:hover {
   color: #ec5548;
+  transition: 0.3s;
 }
 
 .lenguaje {
@@ -23,4 +32,5 @@
 }
 .lenguaje.btn:hover {
   color: #f4b233;
+  transition: 0.3s;
 }

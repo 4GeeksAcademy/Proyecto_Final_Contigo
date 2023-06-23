@@ -1,7 +1,35 @@
 .footer {
-  height: 300px;
+  height: 250px;
   background-color: #585858;
+  color: #8f8f90;
 }
 
-img {
+.logo-corazon {
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+ul {
+  list-style: none;
+  margin-top: 60px;
+  padding-left: 0;
+}
+
+li {
+  padding: 5px;
+}
+
+li:hover {
+  color: #f4b233;
+  transition: 0.3s;
+}
+
+.fa-brands {
+  font-size: 30px;
+  padding: 15px;
+}
+
+a:hover {
+  color: #f4b233;
+  transition: 0.3s;
 }
